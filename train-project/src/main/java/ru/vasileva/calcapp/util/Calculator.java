@@ -3,12 +3,12 @@ package ru.vasileva.calcapp.util;
 public class Calculator {
 
     public static int calculate(String operationSymbol, int num1, int num2) {
-        int result;
-        if (operationSymbol == "+") {
+        int result = 0;
+        if (operationSymbol.contains("+")) {
             result = sum(num1, num2);
-        } else if (operationSymbol == "-") {
+        } else if (operationSymbol.contains("-")) {
             result = subtract(num1, num2);
-        } else if (operationSymbol == "*"){
+        } else if (operationSymbol.contains("*")){
             result = multiply(num1, num2);
         }
         return result;
