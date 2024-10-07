@@ -17,11 +17,11 @@ public class Calculator {
     public static String defineOperation(String operationSymbol) {
         String operation = "";
         if (operationSymbol.contains("+")) {
-           operation = " сложение";
+           operation = " сложения";
         } else if (operationSymbol.contains("-")) {
-           operation = " вычитание";
+           operation = " вычитания";
         } else if (operationSymbol.contains("*")) {
-           operation = " умножение";
+           operation = " умножения";
         }
         return operation;
     }
