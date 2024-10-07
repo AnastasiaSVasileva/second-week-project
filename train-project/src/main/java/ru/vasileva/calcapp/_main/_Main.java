@@ -16,7 +16,7 @@ public class _Main {
         System.out.println("Введите второе число");
         int num2 = sc.nextInt();
         int result = calculate(operationSymbol, num1, num2);
-        String operation =defineOperation(operationSymbol);
+        String operation = defineOperation(operationSymbol);
         printResult(num1, num2, result, operation);
     }
 }
