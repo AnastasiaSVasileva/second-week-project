@@ -8,7 +8,7 @@ public class Calculator {
             result = sum(num1, num2);
         } else if (operationSymbol.contains("-")) {
             result = subtract(num1, num2);
-        } else if (operationSymbol.contains("*")){
+        } else if (operationSymbol.contains("*")) {
             result = multiply(num1, num2);
         }
         return result;
@@ -17,27 +17,24 @@ public class Calculator {
     public static String defineOperation(String operationSymbol) {
         String operation = "";
         if (operationSymbol.contains("+")) {
-           operation = " сложения";
+            operation = " сложения";
         } else if (operationSymbol.contains("-")) {
-           operation = " вычитания";
+            operation = " вычитания";
         } else if (operationSymbol.contains("*")) {
-           operation = " умножения";
+            operation = " умножения";
         }
         return operation;
     }
 
     public static int sum(int num1, int num2) {
-        int sumResult = num1+num2;
-        return sumResult;
+        return num1 + num2;
     }
 
     public static int subtract(int num1, int num2) {
-        int subtractResult = num1-num2;
-        return subtractResult;
+        return num1 - num2;
     }
 
     public static int multiply(int num1, int num2) {
-        int multiplyResult = num1*num2;
-        return multiplyResult;
+        return num1 * num2;
     }
 }

@@ -1,22 +1,22 @@
 package ru.vasileva.calcapp._main;
 
-import java.util.Scanner;
+import ru.vasileva.calcapp.service.ResultWriterService;
+import ru.vasileva.calcapp.util.Calculator;
 
-import static ru.vasileva.calcapp.service.ResultWriterService.printResult;
-import static ru.vasileva.calcapp.util.Calculator.calculate;
-import static ru.vasileva.calcapp.util.Calculator.defineOperation;
+import java.util.Scanner;
 
 public class _Main {
     public static void main(String[] args) {
-        System.out.println("Введите первое число");
+
         Scanner sc = new Scanner(System.in);
+        System.out.println("Введите первое число");
         int num1 = sc.nextInt();
         System.out.println("Введите символ операции в формате + - *");
         String operationSymbol = sc.next();
         System.out.println("Введите второе число");
         int num2 = sc.nextInt();
-        int result = calculate(operationSymbol, num1, num2);
-        String operation = defineOperation(operationSymbol);
-        printResult(num1, num2, result, operation);
+        int result = Calculator.calculate(operationSymbol, num1, num2);
+        String operation = Calculator.defineOperation(operationSymbol);
+        ResultWriterService.printResult(num1, num2, result, operation);
     }
 }
